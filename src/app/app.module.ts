@@ -8,11 +8,11 @@ import { AuthModule } from './modules/auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AppointmentModule } from './modules/appointment/appointment.module';
+import { AdminModule } from './modules/admin/admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +20,8 @@ import { AppointmentModule } from './modules/appointment/appointment.module';
     AuthModule,
     SharedModule,
     HomeModule,
-    AppointmentModule
+    AppointmentModule,
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
