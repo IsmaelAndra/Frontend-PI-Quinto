@@ -1,139 +1,251 @@
-<section>
-    <div class="w-full py-6">
-      <div class="flex">
-        <div class="w-1/4">
-          <a href="">
-          <div class="relative mb-2">
-            <div class="w-10 h-10 mx-auto bg-green-500 rounded-full text-lg text-white flex items-center">
-              <span class="text-center text-white w-full flex justify-center">
-                <i class="fa-solid fa-book-medical"></i>
-              </span>
+<div>
+  <div class="bg-gray-100 h-screen font-primary">
+    <app-header></app-header>
+    <main class="mt-5">
+      <section>
+        <div class="w-full py-6">
+          <div class="flex justify-center">
+            <div class="w-1/4">
+              <a href="">
+                <div class="relative mb-2">
+                  <div class="w-10 h-10 mx-auto bg-sky-500 rounded-full text-lg text-white flex items-center">
+                    <span class="text-center text-white w-full flex justify-center">
+                      <i class="fa-solid fa-book-medical"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="text-xs text-center md:text-base">Cita Médica</div>
+              </a>
             </div>
-          </div>
-    
-          <div class="text-xs text-center md:text-base">Cita Médica</div>
-        </a>
-        </div>
-    
-        <div class="w-1/4">
-          <div class="relative mb-2">
-            <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 2.5rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
-              <div class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
-                <div class="w-0 bg-green-300 py-1 rounded" style="width: 0%;"></div>
+
+            <div class="w-1/4">
+              <div class="relative mb-2">
+                <div class="absolute flex align-center items-center align-middle content-center"
+                  style="width: calc(100% - 2.5rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
+                  <div class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
+                    <div class="w-0 bg-sky-500 py-1 rounded" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div
+                  class="w-10 h-10 mx-auto bg-white border-2 border-gray-200 rounded-full text-lg text-white flex items-center">
+                  <span class="text-center text-gray-600 w-full">
+                    <i class="fa-solid fa-credit-card"></i>
+                  </span>
+                </div>
               </div>
+
+              <div class="text-xs text-center md:text-base">Pago</div>
             </div>
-    
-            <div class="w-10 h-10 mx-auto bg-white border-2 border-gray-200 rounded-full text-lg text-white flex items-center">
-              <span class="text-center text-gray-600 w-full">
-                <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path class="heroicon-ui" d="M19 10h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 0 1 0-2h2V8a1 1 0 0 1 2 0v2zM9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm8 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h5a5 5 0 0 1 5 5v2z"/>
-                </svg>
-              </span>
-            </div>
-          </div>
-    
-          <div class="text-xs text-center md:text-base">Add User</div>
-        </div>
-    
-        <div class="w-1/4">
-          <div class="relative mb-2">
-            <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 2.5rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
-              <div class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
-                <div class="w-0 bg-green-300 py-1 rounded" style="width: 0%;"></div>
+
+            <div class="w-1/4">
+              <div class="relative mb-2">
+                <div class="absolute flex align-center items-center align-middle content-center"
+                  style="width: calc(100% - 2.5rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
+                  <div class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
+                    <div class="w-0 bg-sky-500 py-1 rounded" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div
+                  class="w-10 h-10 mx-auto bg-white border-2 border-gray-200 rounded-full text-lg text-white flex items-center">
+                  <span class="text-center text-gray-600 w-full">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </span>
+                </div>
               </div>
-            </div>
-    
-            <div class="w-10 h-10 mx-auto bg-white border-2 border-gray-200 rounded-full text-lg text-white flex items-center">
-              <span class="text-center text-gray-600 w-full">
-                <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path class="heroicon-ui" d="M9 4.58V4c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v.58a8 8 0 0 1 1.92 1.11l.5-.29a2 2 0 0 1 2.74.73l1 1.74a2 2 0 0 1-.73 2.73l-.5.29a8.06 8.06 0 0 1 0 2.22l.5.3a2 2 0 0 1 .73 2.72l-1 1.74a2 2 0 0 1-2.73.73l-.5-.3A8 8 0 0 1 15 19.43V20a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-.58a8 8 0 0 1-1.92-1.11l-.5.29a2 2 0 0 1-2.74-.73l-1-1.74a2 2 0 0 1 .73-2.73l.5-.29a8.06 8.06 0 0 1 0-2.22l-.5-.3a2 2 0 0 1-.73-2.72l1-1.74a2 2 0 0 1 2.73-.73l.5.3A8 8 0 0 1 9 4.57zM7.88 7.64l-.54.51-1.77-1.02-1 1.74 1.76 1.01-.17.73a6.02 6.02 0 0 0 0 2.78l.17.73-1.76 1.01 1 1.74 1.77-1.02.54.51a6 6 0 0 0 2.4 1.4l.72.2V20h2v-2.04l.71-.2a6 6 0 0 0 2.41-1.4l.54-.51 1.77 1.02 1-1.74-1.76-1.01.17-.73a6.02 6.02 0 0 0 0-2.78l-.17-.73 1.76-1.01-1-1.74-1.77 1.02-.54-.51a6 6 0 0 0-2.4-1.4l-.72-.2V4h-2v2.04l-.71.2a6 6 0 0 0-2.41 1.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                </svg>
-              </span>
+
+              <div class="text-xs text-center md:text-base">Finalizado</div>
             </div>
           </div>
-    
-          <div class="text-xs text-center md:text-base">Setting</div>
         </div>
-  
-        <div class="w-1/4">
-          <div class="relative mb-2">
-            <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 2.5rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
-              <div class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
-                <div class="w-0 bg-green-300 py-1 rounded" style="width: 0%;"></div>
-              </div>
-            </div>
-    
-            <div class="w-10 h-10 mx-auto bg-white border-2 border-gray-200 rounded-full text-lg text-white flex items-center">
-              <span class="text-center text-gray-600 w-full">
-                <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path class="heroicon-ui" d="M9 4.58V4c0-1.1.9-2 2-2h2a2 2 0 0 1 2 2v.58a8 8 0 0 1 1.92 1.11l.5-.29a2 2 0 0 1 2.74.73l1 1.74a2 2 0 0 1-.73 2.73l-.5.29a8.06 8.06 0 0 1 0 2.22l.5.3a2 2 0 0 1 .73 2.72l-1 1.74a2 2 0 0 1-2.73.73l-.5-.3A8 8 0 0 1 15 19.43V20a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-.58a8 8 0 0 1-1.92-1.11l-.5.29a2 2 0 0 1-2.74-.73l-1-1.74a2 2 0 0 1 .73-2.73l.5-.29a8.06 8.06 0 0 1 0-2.22l-.5-.3a2 2 0 0 1-.73-2.72l1-1.74a2 2 0 0 1 2.73-.73l.5.3A8 8 0 0 1 9 4.57zM7.88 7.64l-.54.51-1.77-1.02-1 1.74 1.76 1.01-.17.73a6.02 6.02 0 0 0 0 2.78l.17.73-1.76 1.01 1 1.74 1.77-1.02.54.51a6 6 0 0 0 2.4 1.4l.72.2V20h2v-2.04l.71-.2a6 6 0 0 0 2.41-1.4l.54-.51 1.77 1.02 1-1.74-1.76-1.01.17-.73a6.02 6.02 0 0 0 0-2.78l-.17-.73 1.76-1.01-1-1.74-1.77 1.02-.54-.51a6 6 0 0 0-2.4-1.4l-.72-.2V4h-2v2.04l-.71.2a6 6 0 0 0-2.41 1.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-                </svg>
-              </span>
-            </div>
-          </div>
-    
-          <div class="text-xs text-center md:text-base">Setting</div>
-        </div>
-    
-        <div class="w-1/4">
-          <div class="relative mb-2">
-            <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 2.5rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
-              <div class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
-                <div class="w-0 bg-green-300 py-1 rounded" style="width: 0%;"></div>
-              </div>
-            </div>
-    
-            <div class="w-10 h-10 mx-auto bg-white border-2 border-gray-200 rounded-full text-lg text-white flex items-center">
-              <span class="text-center text-gray-600 w-full">
-                <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-2.3-8.7l1.3 1.29 3.3-3.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-2-2a1 1 0 0 1 1.4-1.42z"/>
-                </svg>
-              </span>
-            </div>
-          </div>
-    
-          <div class="text-xs text-center md:text-base">Finished</div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-gray-50 dark:bg-gray-900">
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-            <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
-            Flowbite    
-        </a>
-        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                    Sign in to your account
-                </h1>
-                <form class="space-y-4 md:space-y-6" action="#">
-                    <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
+      </section>
+      <section>
+        <div>
+          <div class="container mx-auto rounded-lg bg-white shadow-lg shadow-sky-300">
+            <div>
+              <div class="rounded py-1 px-4 md:p-5 mb-4">
+                <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-2">
+                  <div class="lg:col-span-1">
+                    <div class="flex">
+                        <i class="fa-solid fa-book-medical mr-2 py-2"></i>
+                        <p class="font-medium text-lg pb-8">Detalles de la Cita Médica</p>
                     </div>
-                    <div>
-                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+                    <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-4">
+                      <div class="md:col-span-2 relative z-0 w-full mb-6 group">
+                        <label
+                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Especialidad</label>
+                        <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                          <path
+                            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                            fill="#648299" fill-rule="nonzero" />
+                        </svg>
+                        <select
+                          class="py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none focus:outline-none focus:ring-0 peer">
+                          <option hidden>Seleccione su especialidad</option>
+                          <option value="">Ginecología</option>
+                          <option value="">Cardiología</option>
+                          <option value="">Neumología</option>
+                          <option value="">Oftalmología</option>
+                        </select>
+                      </div>
+
+                      <div class="md:col-span-2 relative z-0 w-full mb-6 group">
+                        <input type="text" value="Dr. Kim"
+                          class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
+                          placeholder=" " required disabled />
+                        <label
+                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Doctor</label>
+                      </div>
+
+                      <div class="md:col-span-4 relative z-0 w-full mb-6">
+                        <textarea type="text" maxlength="255"
+                          class="block py-2.5 px-2.5 rounded-xl h-32 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-black border-sky-500 focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                          placeholder=" " required></textarea>
+                        <label
+                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Razón</label>
+                      </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5">
-                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+                  </div>
+
+                  <div class="lg:col-span-1">
+                    <div class="flex">
+                      <i class="fa-solid fa-calendar-days mr-2 py-2"></i>
+                    <p class="font-medium text-lg pb-8">Seleccione el Dia y el Lugar</p>
+                    </div>
+                    <div class="grid gap-4 gap-y-1 text-sm grid-cols-1 md:grid-cols-4">
+                      <div class="md:col-span-2 relative z-0 w-full mb-1 group">
+                        <input type="date" min="2023-11-26"
+                          class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
+                          placeholder=" " required />
+                        <label
+                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha</label>
+                      </div>
+
+                      <div class="md:col-span-2 relative z-0 w-full mb-6 group">
+                        <label
+                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Lugar</label>
+                        <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                          <path
+                            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                            fill="#648299" fill-rule="nonzero" />
+                        </svg>
+                        <select
+                          class="py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none focus:outline-none focus:ring-0 peer">
+                          <option hidden>Seleccione el Lugar</option>
+                          <option value="">Salud360 - Sur</option>
+                          <option value="">Salud360 - Norte</option>
+                          <option value="">Salud360 - Cumbaya</option>
+                          <option value="">Salud360 - Puembo</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="flex pb-4">
+                      <i class="fa-solid fa-clock mr-2 py-2"></i>
+                      <p class="font-medium text-lg col-span-5">Seleccione la Hora</p>
+                    </div>
+                    <div class="md:col-span-4 relative z-0 w-full mb-6 group flex justify-center">
+                      <div class="grid grid-cols-4 gap-2 lg:max-w-xl">
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-1" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-1"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                08:00 a 09:00</div>
                             </div>
-                            <div class="ml-3 text-sm">
-                              <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-                            </div>
+                          </label>
                         </div>
-                        <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-2" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-2"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                09:00 a 10:00</div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-3" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-3"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                10:00 a 11:00</div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-4" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-4"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                11:00 a 12:00</div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-5" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-5"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                13:00 a 14:00</div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-6" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-6"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                14:00 a 15:00</div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-7" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-7"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                15:00 a 16:00</div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="flex items-center rounded">
+                          <input type="radio" id="btn-8" name="btns" value="" class="hidden peer" required>
+                          <label for="btn-8"
+                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
+                            <div class="">
+                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
+                                16:00 a 17:00</div>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                    <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
-                    <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                        Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
-                    </p>
-                </form>
+                    <div class="md:col-span-4 flex justify-end">
+                      <button type="submit" [routerLink]="['/appointment-pay']"
+                        class="flex w-40 text-black rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
+                        <span
+                          class="block w-full rounded-full bg-white px-8 py-2 text-base font-medium hover:bg-transparent">
+                          Agendar
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-  </section>
+      </section>
+    </main>
+  </div>
+</div>
