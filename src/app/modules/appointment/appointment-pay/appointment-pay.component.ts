@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { PayModel } from '../entities/pay.entity';
+import { FormControl, FormGroup } from '@angular/forms';
+import { PayService } from '../services/pay.service';
 
 @Component({
   selector: 'app-appointment-pay',
@@ -21,7 +24,27 @@ import { Router } from '@angular/router';
   ]
 })
 export class AppointmentPayComponent {
-  constructor(private router: Router) { }
+  pays: PayModel = {
+    payment_method: 'tarjeta',
+    card_name: '',
+    card_number: 0,
+    expiration_month: 0,
+    expiration_year: 0,
+    security_code: 0,
+    status_pay: 'Activo'
+  }
+
+  newPay = new FormGroup({
+    payment_method: new FormControl('tarjeta'),
+    card_name: new FormControl(''),
+    card_number: new FormControl(0),
+    expiration_month: new FormControl(0),
+    expiration_year: new FormControl(0),
+    security_code: new FormControl(0),
+    status_pay: new FormControl('activo'),
+  })
+
+  constructor(private router: Router, private payService: PayService) { }
 
   ngOnInit() {
   }
@@ -32,16 +55,23 @@ export class AppointmentPayComponent {
     this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
   }
 
-  pagar() {
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "¡Pago Realizado con Exito!",
-      showConfirmButton: false,
-      timer: 1500
-    });
+  submit(data: any) {
+    if (this.pays) {
+      data.id_pay = this.pays.id_pay;
+    }
+    this.payService.store(data).subscribe((result) => {
+      if (result) {
+        Swal.fire({
+          icon: 'success',
+          title: "¡Pago Realizado con Exito!",
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+    })
     setTimeout(() => {
       this.router.navigate(['/appointment-finish'])
     }, 1700);
+    console.log(data);
   }
 }
