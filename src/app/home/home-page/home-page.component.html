@@ -1,95 +1,54 @@
-<body class="font-primary mt-6">
-  <section class="min-h-screen h-screen flex m-6">
-        <form class="sm:w-3/3 w-full px-36 lg:px-0 mx-auto m-6">
-          <div class="grid md:grid-cols-2 md:gap-12">
-            <div class="relative z-0 w-full mb-6 group">
-              <input type="text"
-                class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-sky-500 appearance-none focus:outline-none focus:ring-0 peer"
-                placeholder=" " required />
-              <label
-                class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
-            </div>
-            <div class="relative z-0 w-full mb-6 group">
-              <input type="text"
-                class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-sky-500 appearance-none  focus:outline-none focus:ring-0 peer"
-                placeholder=" " required />
-              <label
-                class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Apellido</label>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 md:gap-6">
-            <div class="relative z-0 w-full mb-6 group">
-              <input type="text"
-                class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                placeholder=" " required />
-              <label
-                class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Dirección</label>
-            </div>
-            <div class="relative z-0 w-full mb-6 group">
-              <input type="number"
-                class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                placeholder=" " required />
-              <label
-                class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Número</label>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 md:gap-6">
-            <div class="relative z-0 w-full mb-6 group">
-              <label
-                class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Género</label>
-              <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 412 232">
-                <path
-                  d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
-                  fill="#648299" fill-rule="nonzero" />
-              </svg>
-              <select
-                class="py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-sky-500 appearance-none  focus:outline-none focus:ring-0 peer">
-                <option hidden>Seleccione su género</option>
-                <option value="">Hombre</option>
-                <option value="">Mujer</option>
-                <option value="">No Binario</option>
-                <option value="">Prefiero No Decirlo</option>
-              </select>
-            </div>
-            <div class="relative z-0 w-full mb-6 group">
-              <input type="date"
-                class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-sky-500 appearance-none  focus:outline-none focus:ring-0 peer"
-                placeholder=" " required />
-              <label
-                class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha de Nacimiento</label>
-            </div>
-          </div>
-          <div class="relative z-0 w-full mb-6 group ">
-            <input type="mail"
-              class="block peer py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-              placeholder=" " required />
-            <label
-              class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Correo
-              Electronico</label>
-          </div>
-          <div class="grid md:grid-cols-2 md:gap-6">
-            <div class="relative z-0 w-full mb-6 group">
-              <input type="password"
-                class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-sky-500 appearance-none  focus:outline-none focus:ring-0 peer"
-                placeholder=" " required />
-              <label
-                class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Contraseña</label>
-            </div>
-            
-          </div>
-          <div class="space-y-5">
-            <div>
-              <button type="submit"
-                class="flex w-full rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
-                <span
-                  class="block w-full rounded-full bg-white text-black px-8 py-2 text-base font-medium hover:bg-transparent hover:text-white">
-                  Guardar
-                </span>
-              </button>
-            </div>
+<div class="bg-cover bg-no-repeat h-screen"
+    style="background-image: url(https://www.operarme.es/thumb/1200x630c/storage/media/noticias/imagenes-medicas/recuperacion-paciente.jpg)">
+    <aside class="font-primary sticky top-0 z-40 w-full">
+        <nav class="bg-white border-b-4 w-full border-sky-500 rounded-b-lg shadow-lg shadow-sky-200">
+            <div class="mx-auto max-w-7xl w-full px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 w-full items-center justify-between">
+                    <div class="flex flex-0 ml-2 -mr-50 sm:items-stretch sm:justify-start sm:p-2 sm:pr-10">
+                        <button type="button"
+                          class="sm:block sm:relative sm:rounded-full sm:p-1 sm:text-sky-500 sm:hover:text-cyan-300 sm:hover:outline-none sm:hover:ring-2 sm:hover:ring-white sm:hover:ring-offset-2 sm:hover:ring-offset-sky-500">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                          </svg>
+                        </button>
+                      </div>
+                    <div class="flex-1 w-full justify-center items-center sm:flex sm:justify-center gap-16 bg">
+                        <div>
+                            <a href="">Inicio</a>
+                        </div>
+                        <div>
+                            <a href="">Servicios</a>
+                        </div>
+                        <div class="flex flex-shrink-0 items-center">
+                            <img src="https://mibluemedical.com/wp-content/uploads/2021/02/cropped-Bluemedical-icon-2.png"
+                                class="w-10 h-10" alt="">
+                            <p class="text-3xl pl-2 text-sky-500">Salud360</p>
+                        </div>
+                        <div>
+                            <a href="">Contactanos</a>
+                        </div>
+                        <div>
+                            <a href="">Nosotros</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-end ">
+                        <div class="">
+                            <button type="submit"
+                                class="flex w-full text-black rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
+                                <span
+                                    class="block w-full rounded-full bg-white px-4 py-1 text-base font-medium hover:bg-transparent">
+                                    Solicitar una Cita
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-          </div>
-        </form>
-  </section>
-</body>
+            </div>
+        </nav>
+    </aside>
+    <div>
+
+    </div>
+</div>

@@ -65,6 +65,7 @@
           <div class="container mx-auto rounded-lg bg-white shadow-lg shadow-sky-300">
             <div>
               <div class="rounded py-1 px-4 md:p-5 mb-4">
+                <form action="#" method="POST" [formGroup]="newAppointment" (ngSubmit)="submit(newAppointment.value)">
                 <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-2">
                   <div class="lg:col-span-1">
                     <div class="flex">
@@ -81,26 +82,55 @@
                             d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
                             fill="#648299" fill-rule="nonzero" />
                         </svg>
-                        <select
+                        <select formControlName="speciality_medical"
                           class="py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none focus:outline-none focus:ring-0 peer">
-                          <option hidden>Seleccione su especialidad</option>
-                          <option value="">Ginecología</option>
-                          <option value="">Cardiología</option>
-                          <option value="">Neumología</option>
-                          <option value="">Oftalmología</option>
+                          <option hidden>Seleccione la Especialidad</option>
+                          <option *ngFor="let specility of specialities" value="{{specility.name_speciality}}">{{specility.name_speciality}}</option>
                         </select>
                       </div>
 
                       <div class="md:col-span-2 relative z-0 w-full mb-6 group">
-                        <input type="text" value="Dr. Kim"
-                          class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                          placeholder=" " required disabled />
                         <label
                           class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Doctor</label>
+                        <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                          <path
+                            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                            fill="#648299" fill-rule="nonzero" />
+                        </svg>
+                        <select formControlName="doctor"
+                          class="py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none focus:outline-none focus:ring-0 peer">
+                          <option hidden>Seleccione el Doctor</option>
+                          <option *ngFor="let doctor of doctors" value="{{doctor.id_doctor}}">{{doctor.id_doctor}}</option>
+                        </select>
                       </div>
 
+                      <div class="md:col-span-2 relative z-0 w-full mb-6 group">
+                        <label
+                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Paciente</label>
+                        <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+                          <path
+                            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                            fill="#648299" fill-rule="nonzero" />
+                        </svg>
+                        <select formControlName="pacient"
+                          class="py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none focus:outline-none focus:ring-0 peer">
+                          <option hidden>Seleccione el Paciente</option>
+                          <option *ngFor="let pacient of pacients" value="{{pacient.id_pacient}}">{{pacient.name_pacient}} {{pacient.lastname_pacient}} </option>
+                        </select>
+                      </div>
+
+                      <!-- <div class="md:col-span-2 relative z-0 w-full mb-6 group">
+                        <input type="text" value="Carlos Duran" formControlName="doctor"
+                          class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
+                          placeholder="" required />
+                        <label
+                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Doctor</label>
+                      </div> -->
+
                       <div class="md:col-span-4 relative z-0 w-full mb-6">
-                        <textarea type="text" maxlength="255"
+                        <textarea type="text" maxlength="255" formControlName="reason_medical"
                           class="block py-2.5 px-2.5 rounded-xl h-32 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-black border-sky-500 focus:border-blue-500 focus:outline-none focus:ring-0 peer"
                           placeholder=" " required></textarea>
                         <label
@@ -116,7 +146,7 @@
                     </div>
                     <div class="grid gap-4 gap-y-1 text-sm grid-cols-1 md:grid-cols-4">
                       <div class="md:col-span-2 relative z-0 w-full mb-1 group">
-                        <input type="date" min="2023-11-26"
+                        <input type="date" formControlName="date_medical" pattern="\d{4}/\d{2}/\d{2}"
                           class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
                           placeholder=" " required />
                         <label
@@ -132,13 +162,10 @@
                             d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
                             fill="#648299" fill-rule="nonzero" />
                         </svg>
-                        <select
+                        <select formControlName="consultory"
                           class="py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none focus:outline-none focus:ring-0 peer">
                           <option hidden>Seleccione el Lugar</option>
-                          <option value="">Salud360 - Sur</option>
-                          <option value="">Salud360 - Norte</option>
-                          <option value="">Salud360 - Cumbaya</option>
-                          <option value="">Salud360 - Puembo</option>
+                          <option  *ngFor="let consultory of consultories" value="{{consultory.id_consultory}}"> {{consultory.name_consultory}} </option>
                         </select>
                       </div>
                     </div>
@@ -148,90 +175,20 @@
                     </div>
                     <div class="md:col-span-4 relative z-0 w-full mb-6 group flex justify-center">
                       <div class="grid grid-cols-4 gap-2 lg:max-w-xl">
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-1" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-1"
+                        <div class="flex items-center rounded" *ngFor="let schedule of schedules">
+                          <input type="radio" formControlName="schedule" id="{{schedule.id_schedule}}" name="schedule" value="{{schedule.id_schedule}}" class="hidden peer" required>
+                          <label for="{{schedule.id_schedule}}"
                             class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
                             <div class="">
                               <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                08:00 a 09:00</div>
-                            </div>
-                          </label>
-                        </div>
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-2" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-2"
-                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
-                            <div class="">
-                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                09:00 a 10:00</div>
-                            </div>
-                          </label>
-                        </div>
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-3" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-3"
-                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
-                            <div class="">
-                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                10:00 a 11:00</div>
-                            </div>
-                          </label>
-                        </div>
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-4" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-4"
-                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
-                            <div class="">
-                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                11:00 a 12:00</div>
-                            </div>
-                          </label>
-                        </div>
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-5" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-5"
-                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
-                            <div class="">
-                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                13:00 a 14:00</div>
-                            </div>
-                          </label>
-                        </div>
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-6" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-6"
-                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
-                            <div class="">
-                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                14:00 a 15:00</div>
-                            </div>
-                          </label>
-                        </div>
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-7" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-7"
-                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
-                            <div class="">
-                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                15:00 a 16:00</div>
-                            </div>
-                          </label>
-                        </div>
-                        <div class="flex items-center rounded">
-                          <input type="radio" id="btn-8" name="btns" value="" class="hidden peer" required>
-                          <label for="btn-8"
-                            class="flex w-full text-black border-2 justify-center hover:text-black hover:border-cyan-300 hover:scale-95 border-sky-500 rounded-full p-[1px] cursor-pointer peer-checked:text-white peer-checked:bg-gradient-to-tr from-cyan-300 to-sky-600 peer-checked:border-cyan-300">
-                            <div class="">
-                              <div class="w-full rounded-full px-3 py-2 text-sm font-medium">
-                                16:00 a 17:00</div>
+                                {{schedule.startime_schedule}} a {{schedule.departime_schedule}} </div>
                             </div>
                           </label>
                         </div>
                       </div>
                     </div>
                     <div class="md:col-span-4 flex justify-end">
-                      <button type="submit" [routerLink]="['/appointment-pay']"
+                      <button type="submit"
                         class="flex w-40 text-black rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
                         <span
                           class="block w-full rounded-full bg-white px-8 py-2 text-base font-medium hover:bg-transparent">
@@ -241,6 +198,7 @@
                     </div>
                   </div>
                 </div>
+              </form>
               </div>
             </div>
           </div>

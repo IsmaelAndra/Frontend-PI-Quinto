@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AppointmentModule } from './modules/appointment/appointment.module';
 import { AdminModule } from './modules/admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,9 @@ import { AdminModule } from './modules/admin/admin.module';
     HomeModule,
     AppointmentModule,
     AdminModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

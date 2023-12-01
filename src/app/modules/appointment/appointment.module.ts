@@ -5,6 +5,8 @@ import { AppointmentRoutingModule } from './appointment-routing.module';
 import { AppointmentPayComponent } from './appointment-pay/appointment-pay.component';
 import { AppointmentFinishComponent } from './appointment-finish/appointment-finish.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     AppointmentRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class AppointmentModule { }
