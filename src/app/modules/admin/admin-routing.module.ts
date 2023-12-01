@@ -8,6 +8,7 @@ import { AdminOfficesComponent } from './admin-offices/admin-offices.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminPatientsComponent } from './admin-patients/admin-patients.component';
 import { AppointmentHomeComponent } from '../appointment/appointment-home/appointment-home.component';
+import { AdminAppointmentComponent } from './admin-appointment/admin-appointment.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
       {path: 'admin', pathMatch: 'full', redirectTo: 'admin-home'},
       { path: 'admin-home', component: AdminHomeComponent },
       { path: 'admin-doctors', component: AdminDoctorListComponent },
-      { path: 'admin-appointment', component: AppointmentHomeComponent },
+      { path: 'admin-appointment', component: AdminAppointmentComponent },
       { path: 'admin-users', component: AdminUsersComponent },
       { path: 'admin-patients', component: AdminPatientsComponent },
       { path: 'admin-offices', component: AdminOfficesComponent },
