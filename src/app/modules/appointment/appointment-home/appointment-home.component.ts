@@ -60,7 +60,7 @@ export class AppointmentHomeComponent implements OnInit {
     reason_medical: '',
     schedule: 0,
     consultory: 0,
-    pacient: 0,
+    pacient: 1,
     doctor: 0
   }
 
@@ -71,7 +71,7 @@ export class AppointmentHomeComponent implements OnInit {
     reason_medical: new FormControl(''),
     schedule: new FormControl(0),
     consultory: new FormControl(0),
-    pacient: new FormControl(0),
+    pacient: new FormControl(1),
     doctor: new FormControl(0)
   })
 
