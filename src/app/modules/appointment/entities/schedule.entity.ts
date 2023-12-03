@@ -1,5 +1,5 @@
 export interface ScheduleModel {
-    id_schedule?: Number | null;
+    id_schedule: Number | null;
     weekday_schedule: String;
     startime_schedule: String;
     departime_schedule: String;

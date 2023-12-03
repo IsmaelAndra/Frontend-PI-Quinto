@@ -1,5 +1,5 @@
 export interface SpecialityModel {
-    id_speciality?: Number | null;
+    id_speciality: Number | null;
     name_speciality: string;
     description_speciality: string;
 }

@@ -25,6 +25,7 @@ import { PayService } from '../services/pay.service';
 })
 export class AppointmentPayComponent {
   pays: PayModel = {
+    id_pay: 0,
     payment_method: 'tarjeta',
     card_name: '',
     card_number: 0,

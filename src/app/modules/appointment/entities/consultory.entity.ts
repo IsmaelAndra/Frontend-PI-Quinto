@@ -1,5 +1,5 @@
 export interface ConsultoryModel {
-    id_consultory?: Number | null;
+    id_consultory: Number | null;
     name_consultory: String;
     address_consultory: String;
     phone_consultory: Number;

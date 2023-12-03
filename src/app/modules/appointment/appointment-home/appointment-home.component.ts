@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsultoryModel } from '../entities/consultory.entity';
 import { PacientModel } from '../entities/pacient.entity';
-import { DoctorModel } from '../entities/doctor.entity';
+import { DoctorModel } from '../../doctor/entities/doctor.entity';
 import { ScheduleModel } from '../entities/schedule.entity';
 import { SpecialityModel } from '../entities/speciality.entity';
 import { SpecialityService } from '../services/speciality.service';
 import { ScheduleService } from '../services/schedule.service';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppointmentModel } from '../entities/appointment.entity';
 import { AppointmentService } from '../services/appointment.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { ConsultoryService } from '../services/consultory.service';
-import { DoctorService } from '../services/doctor.service';
+import { DoctorService } from '../../doctor/services/doctor.service';
 import { UserModel } from '../entities/user.entity';
 import { PacientService } from '../services/pacient.service';
 
@@ -54,6 +54,7 @@ export class AppointmentHomeComponent implements OnInit {
   }
 
   appointments: AppointmentModel = {
+    id_medical: 0,
     date_medical: new Date(),
     speciality_medical: '',
     status_medical: 'activo',
@@ -65,14 +66,14 @@ export class AppointmentHomeComponent implements OnInit {
   }
 
   newAppointment = new FormGroup({
-    date_medical: new FormControl(new Date()),
-    speciality_medical: new FormControl(''),
-    status_medical: new FormControl('activo'),
-    reason_medical: new FormControl(''),
-    schedule: new FormControl(0),
-    consultory: new FormControl(0),
-    pacient: new FormControl(1),
-    doctor: new FormControl(0)
+    date_medical: new FormControl(new Date(), Validators.required),
+    speciality_medical: new FormControl('', Validators.required),
+    status_medical: new FormControl('activo', Validators.required),
+    reason_medical: new FormControl('', Validators.required),
+    schedule: new FormControl(0, Validators.required),
+    consultory: new FormControl(0, Validators.required),
+    pacient: new FormControl(1, Validators.required),
+    doctor: new FormControl(0, Validators.required)
   })
 
   submit(data: any) {
@@ -83,15 +84,18 @@ export class AppointmentHomeComponent implements OnInit {
       if (result) {
         Swal.fire({
           icon: 'success',
-          title: 'Agendado con Exito',
-          showConfirmButton: false,
-          timer: 1500
-        })
+          title: "Agendado con Exito",
+          text: "Si no realiza el pago en los proximos 30 minutos su cita se cancelara",
+          showConfirmButton: true,
+          confirmButtonText: "Entendido",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.router.navigate(['/appointment-pay'])
+          }
+        });
+        console.log(data);
       }
     })
-    setTimeout(() => {
-      this.router.navigate(['/appointment-pay'])
-    }, 1700);
-    console.log(data);
   }
-}
+
+};

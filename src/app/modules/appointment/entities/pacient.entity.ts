@@ -1,7 +1,5 @@
-import { UserModel } from "./user.entity";
-
 export interface PacientModel {
-    id_pacient?: Number | null;
+    id_pacient: Number | null;
     identification_pacient: Number;
     name_pacient: string;
     lastname_pacient: string;
@@ -14,9 +12,9 @@ export interface PacientModel {
 }
 
 export interface CreatePacientDto extends Omit<PacientModel, 'id_pacient'>{
-    id_user?: number;
+    id_user: number;
 }
 
 export interface UpdatePacientDto extends Partial<PacientModel>{
-    id_user?: number;
+    id_user: number;
 }

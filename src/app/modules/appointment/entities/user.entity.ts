@@ -1,7 +1,7 @@
 import { RolModel } from "./rol.entity";
 
 export interface UserModel {
-    id_user?: Number | null;
+    id_user: Number | null;
     photo_user: String;
     name_user: String;
     lastname_user: String;
@@ -16,9 +16,9 @@ export interface UserModel {
 }
 
 export interface CreateUserDto extends Omit<UserModel, 'id_user'>{
-    id_rol?: number;
+    id_rol: number;
 }
 
 export interface UpdateUserDto extends Partial<UserModel>{
-    id_rol?: number;
+    id_rol: number;
 }

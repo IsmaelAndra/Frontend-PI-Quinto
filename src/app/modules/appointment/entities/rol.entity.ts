@@ -1,5 +1,5 @@
 export interface RolModel {
-    id_rol?: Number | null;
+    id_rol: Number | null;
     name_rol: String;
     description_rol: String;
 }

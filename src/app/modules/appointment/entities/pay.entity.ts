@@ -1,5 +1,5 @@
 export interface PayModel {
-    id_pay?: Number | null;
+    id_pay: Number | null;
     payment_method: String;
     card_name: String;
     card_number: Number;
