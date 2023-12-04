@@ -1,9 +1,12 @@
+import { SpecialityModel } from "../../appointment/entities/speciality.entity";
+import { UserModel } from "../../appointment/entities/user.entity";
+
 export interface DoctorModel {
     id_doctor: Number | null;
     startime_doctor: String;
     departime_doctor: String;
-    speciality: String;
-    user: number;
+    speciality: SpecialityModel;
+    user: UserModel;
 }
 
 export interface CreateDoctorDto extends Omit<DoctorModel, 'id_doctor'>{

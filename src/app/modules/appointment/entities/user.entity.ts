@@ -12,7 +12,7 @@ export interface UserModel {
     email_user: String;
     password_user: String;
     pass_verification_user: String;
-    rol: number;
+    rol: RolModel;
 }
 
 export interface CreateUserDto extends Omit<UserModel, 'id_user'>{

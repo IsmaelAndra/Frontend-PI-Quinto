@@ -10,6 +10,8 @@ import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AdminExamComponent } from './admin-exam/admin-exam.component';
 import { SharedModule } from "../../shared/shared.module";
 import { AdminPatientsComponent } from './admin-patients/admin-patients.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -27,7 +29,10 @@ import { AdminPatientsComponent } from './admin-patients/admin-patients.componen
     imports: [
         CommonModule,
         AdminRoutingModule,
-        SharedModule
+        SharedModule,
+        FormsModule,
+        HttpClientModule,
+        ReactiveFormsModule
     ]
 })
 export class AdminModule { }

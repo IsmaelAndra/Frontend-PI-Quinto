@@ -1,3 +1,5 @@
+import { UserModel } from "./user.entity";
+
 export interface PacientModel {
     id_pacient: Number | null;
     identification_pacient: Number;
@@ -8,7 +10,7 @@ export interface PacientModel {
     address_pacient: string;
     phone_pacient: Number;
     blood_type_pacient: string;
-    user: number;
+    user: UserModel;
 }
 
 export interface CreatePacientDto extends Omit<PacientModel, 'id_pacient'>{

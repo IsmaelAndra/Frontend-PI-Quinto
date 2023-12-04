@@ -6,7 +6,7 @@ import { ScheduleModel } from '../entities/schedule.entity';
 import { SpecialityModel } from '../entities/speciality.entity';
 import { SpecialityService } from '../services/speciality.service';
 import { ScheduleService } from '../services/schedule.service';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppointmentModel } from '../entities/appointment.entity';
 import { AppointmentService } from '../services/appointment.service';
 import Swal from 'sweetalert2';
@@ -59,10 +59,75 @@ export class AppointmentHomeComponent implements OnInit {
     speciality_medical: '',
     status_medical: 'activo',
     reason_medical: '',
-    schedule: 0,
-    consultory: 0,
-    pacient: 1,
-    doctor: 0
+    schedule: {
+      id_schedule: 0,
+      weekday_schedule: '',
+      startime_schedule: '',
+      departime_schedule: ''
+    },
+    consultory: {
+      id_consultory: 0,
+      name_consultory: '',
+      phone_consultory: 0,
+      address_consultory: ''
+    },
+    pacient: {
+      id_pacient: 0,
+      identification_pacient: 0,
+      name_pacient: '',
+      lastname_pacient: '',
+      dateofbirth_pacient: new Date(),
+      gender_pacient: '',
+      address_pacient: '',
+      phone_pacient: 0,
+      blood_type_pacient: '',
+      user: {
+        id_user: 0,
+        photo_user: '',
+        name_user: '',
+        lastname_user: '',
+        dateofbirth_user: new Date(),
+        gender_user: '',
+        address_user: '',
+        phone_user: 0,
+        email_user: '',
+        password_user: '',
+        pass_verification_user: '',
+        rol: {
+          id_rol: 0,
+          name_rol: '',
+          description_rol: ''
+        }
+      }
+    },
+    doctor: {
+      id_doctor: 0,
+      startime_doctor: '',
+      departime_doctor: '',
+      speciality: {
+        id_speciality: 0,
+        name_speciality: '',
+        description_speciality: ''
+      },
+      user: {
+        id_user: 0,
+        photo_user: '',
+        name_user: '',
+        lastname_user: '',
+        dateofbirth_user: new Date(),
+        gender_user: '',
+        address_user: '',
+        phone_user: 0,
+        email_user: '',
+        password_user: '',
+        pass_verification_user: '',
+        rol: {
+          id_rol: 0,
+          name_rol: '',
+          description_rol: ''
+        }
+      }
+    }
   }
 
   newAppointment = new FormGroup({
@@ -97,5 +162,4 @@ export class AppointmentHomeComponent implements OnInit {
       }
     })
   }
-
 };
