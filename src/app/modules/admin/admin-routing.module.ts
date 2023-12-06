@@ -9,6 +9,7 @@ import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminPatientsComponent } from './admin-patients/admin-patients.component';
 import { AppointmentHomeComponent } from '../appointment/appointment-home/appointment-home.component';
 import { AdminAppointmentComponent } from './admin-appointment/admin-appointment.component';
+import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
       { path: 'admin-users', component: AdminUsersComponent },
       { path: 'admin-patients', component: AdminPatientsComponent },
       { path: 'admin-offices', component: AdminOfficesComponent },
-      { path: 'admin-profile', component: ProfileDoctorComponent },
+      { path: 'admin-profile', component: AdminProfileComponent },
       { path: 'admin-exam', component: AdminExamComponent },
     ]
   }
