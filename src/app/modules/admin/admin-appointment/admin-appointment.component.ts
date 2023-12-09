@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-appointment',
@@ -7,6 +8,30 @@ import { Component } from '@angular/core';
 })
 export class AdminAppointmentComponent {
 
+  //  INICIO DE VALIDACIONES LOGIN
+  registerForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.registerForm = this.formBuilder.group({
+      nombre: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]],
+      identificacion: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      direccion: ['', [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/)]],
+      telefono: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      fecha: ['', [Validators.required,]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      confirmPassword: ['', [Validators.required]],
+    }, { validator: this.checkPasswords });
+
+  }
+
+  checkPasswords(group: FormGroup) {
+    const password = group.controls['password'].value;
+    const confirmPassword = group.controls['confirmPassword'].value;
+
+    return password === confirmPassword ? null : { notSame: true };
+  }
+  // FIN DE VALIDACIONES LOGIN
 
   new = false;
 
