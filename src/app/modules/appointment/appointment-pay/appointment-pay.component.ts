@@ -3,7 +3,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { PayModel } from '../entities/pay.entity';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PayService } from '../services/pay.service';
 
 @Component({
@@ -37,11 +37,11 @@ export class AppointmentPayComponent {
 
   newPay = new FormGroup({
     payment_method: new FormControl('tarjeta'),
-    card_name: new FormControl(''),
-    card_number: new FormControl(0),
-    expiration_month: new FormControl(0),
-    expiration_year: new FormControl(0),
-    security_code: new FormControl(0),
+    card_name: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z]+\s[a-zA-Z]+$/)]),
+    card_number: new FormControl(0, [Validators.required,Validators.pattern(/^\d{16}$/)]),
+    expiration_month: new FormControl(0, Validators.required),
+    expiration_year: new FormControl(0, Validators.required),
+    security_code: new FormControl(0, [Validators.required,Validators.pattern(/^\d{3}$/)]),
     status_pay: new FormControl('activo'),
   })
 

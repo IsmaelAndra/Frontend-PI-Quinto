@@ -6,7 +6,7 @@ import { ScheduleModel } from '../entities/schedule.entity';
 import { SpecialityModel } from '../entities/speciality.entity';
 import { SpecialityService } from '../services/speciality.service';
 import { ScheduleService } from '../services/schedule.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppointmentModel } from '../entities/appointment.entity';
 import { AppointmentService } from '../services/appointment.service';
 import Swal from 'sweetalert2';
@@ -131,7 +131,7 @@ export class AppointmentHomeComponent implements OnInit {
   }
 
   newAppointment = new FormGroup({
-    date_medical: new FormControl(new Date(), Validators.required),
+    date_medical: new FormControl(new Date(),[Validators.required, this.datefuturaValidator]),
     speciality_medical: new FormControl('', Validators.required),
     status_medical: new FormControl('activo', Validators.required),
     reason_medical: new FormControl('', Validators.required),
@@ -140,6 +140,16 @@ export class AppointmentHomeComponent implements OnInit {
     pacient: new FormControl(1, Validators.required),
     doctor: new FormControl(0, Validators.required)
   })
+
+  datefuturaValidator(control: AbstractControl): { [key: string]: boolean } | null {
+    const fechaSeleccionada = new Date(control.value);
+    const fechaHaceUnMes = new Date();
+    fechaHaceUnMes.setMonth(fechaHaceUnMes.getMonth() + 1);
+
+    return fechaSeleccionada > new Date() && fechaSeleccionada <= fechaHaceUnMes ? null : { fechaInvalida: true };
+  }
+
+
 
   submit(data: any) {
     if (this.appointments) {
