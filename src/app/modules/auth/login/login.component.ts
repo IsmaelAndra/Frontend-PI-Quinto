@@ -18,6 +18,14 @@ export class LoginComponent {
       contraseña: ['', Validators.required,],
     });
   }
+
+  formCheck() {
+    if (this.registerForm.valid) {
+      console.log('Formulario válido, datos:', this.registerForm.value);
+    } else {
+      alert('Por favor, completa el formulario correctamente antes de enviarlo.');
+    }
+  }
   // FIN DE VALIDACIONES LOGIN
 
 }

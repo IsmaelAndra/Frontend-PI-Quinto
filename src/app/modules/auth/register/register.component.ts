@@ -57,4 +57,12 @@ export class RegisterComponent implements OnInit {
     password_validation_user: new FormControl(''),
     status_user: new FormControl(false)
   },);
+
+  formCheck() {
+    if (this.registerForm.valid) {
+      console.log('Formulario válido, datos:', this.registerForm.value);
+    } else {
+      alert('Por favor, completa el formulario correctamente antes de enviarlo.');
+    }
+  }
 }

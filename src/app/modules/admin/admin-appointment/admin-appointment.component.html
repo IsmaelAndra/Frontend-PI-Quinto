@@ -10,13 +10,6 @@
               <div
                 class="flex items-center justify-end flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white">
                 <div>
-                  <button (click)="openNewModal()"
-                    class="flex w-64 shadow-lg  rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
-                    <span
-                      class="block w-64 rounded-full shadow-lg bg-white text-black px-4 py-2 text-base font-medium hover:bg-transparent hover:text-white">
-                      <i class="fa fa-plus mr-2" aria-hidden="true"></i>Agregar Citas Medicas
-                    </span>
-                  </button>
                 </div>
               </div>
               <div class="rounded-md border-sky-300 border-2">
@@ -69,7 +62,7 @@
                           class="flex w-32 rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
                           <span
                             class="block w-32 shadow-lg rounded-full bg-white text-black px-4 py-2 text-base font-medium hover:bg-transparent hover:text-white">
-                            <i class="fa fa-expand mr-3" aria-hidden="true"></i>Detalles
+                            <i class="fa fa-file-text mr-3" aria-hidden="true"></i>Detalles
                           </span>
                         </button>
                       </td>
@@ -301,116 +294,7 @@
               </div>
             </div>
 
-            <div id="newDoctorModal"
-              class="hidden bg-black bg-opacity-70 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen max-h-full">
-              <div class="relative w-full z-50 max-w-2xl max-h-full">
-                <form class="relative bg-white rounded-lg shadow">
-                  <div class="flex items-start justify-between p-4 border-b rounded-t shadow-lg">
-                    <h3 class="text-xl text-sky-600"><i class="fa fa-plus mr-2" aria-hidden="true"></i>
-                      Nueva Cita Medica
-                    </h3>
-                    <button class="p-1 hover:text-white hover:bg-sky-500 rounded-full focus:outline-none focus:ring" (click)="closeNewModal()">
-                      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  </div>
-                  <form class="sm:w-3/3 mt-4 px-36 lg:px-0 mx-auto">
-                    <div class="px-5">
-                      <div class="relative z-0 w-full mb-6 group ">
-                        <input type="text"
-                          class="block peer py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                          placeholder=" " required  />
-                        <label
-                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Paciente</label>
-                      </div>
-                      <div class="relative z-0 w-full mb-6 group ">
-                        <input type="text"
-                          class="block peer py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                          placeholder=" " required  />
-                        <label
-                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Identificacion</label>
-                      </div>
-                      <div class="grid md:grid-cols-2 md:gap-6">
-                        <div class="relative z-0 w-full mb-6 group">
-                          <input type="text"
-                            class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                            placeholder=" " required  />
-                          <label
-                            class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Especialidad</label>
-                        </div>
-                        <div class="relative z-0 w-full mb-6 group">
-                          <input type="number"
-                            class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                            placeholder=" " required  />
-                          <label
-                            class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Doctor</label>
-                        </div>
-                      </div>
-                      <div class="grid md:grid-cols-2 md:gap-6">
-                        <div class="relative z-0 w-full mb-6 group">
-                          <input type="text"
-                            class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                            placeholder=" " required  />
-                          <label
-                            class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha</label>
-                        </div>
-                        <div class="relative z-0 w-full mb-6 group">
-                          <input type="number"
-                            class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                            placeholder=" " required  />
-                          <label
-                            class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Hora</label>
-                        </div>
-                      </div>
-                      <div class="grid md:grid-cols-2 md:gap-6">
-                        <div class="relative z-0 w-full mb-6 group">
-                          <input type="text"
-                            class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-sky-500 appearance-none  focus:outline-none focus:ring-0 peer"
-                            placeholder=" " required >
-                          <label
-                            class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Consultorio</label>
-                        </div>
-                        <div class="relative z-0 w-full mb-6 group">
-                          <input type="text"
-                            class="block py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-sky-500 appearance-none  focus:outline-none focus:ring-0 peer"
-                            placeholder=" " required >
-                          <label
-                            class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Estado
-                            </label>
-                        </div>
-                      </div>
-                      <div class="relative z-0 w-full mb-6 group ">
-                        <input type="text"
-                          class="block peer py-2.5 px-2.5 rounded-xl w-full text-sm text-black bg-transparent border-0 border-b-2 border-cyan-300 appearance-none  focus:outline-none focus:ring-0 peer"
-                          placeholder=" " required  />
-                        <label
-                          class="peer-focus:font-medium px-2.5 left-0 absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Razon</label>
-                      </div>
 
-                    </div>
-                  </form>
-                  <div
-                    class="flex items-center justify-center p-4 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b">
-                    <button
-                      class="flex w-52 rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
-                      <span
-                        class="block w-52 rounded-full bg-white text-black px-8 py-2 text-base font-medium hover:bg-transparent hover:text-white">
-                        <i class="fa-regular fa-floppy-disk mr-2"></i> Guardar
-                      </span>
-                    </button>
-                    <button (click)="closeNewModal()"
-                      class="flex w-52 rounded-full bg-gradient-to-tr from-red-400 to-red-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
-                      <span
-                        class="block w-52 rounded-full bg-white text-black px-8 py-2 text-base font-medium hover:bg-transparent hover:text-white">
-                        <i class="fa-solid fa-ban mr-2"></i> Cancelar
-                      </span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
       </section>
