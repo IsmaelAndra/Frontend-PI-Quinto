@@ -8,8 +8,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AdminAppointmentComponent {
 
-  
-
   new = false;
 
   openNewModal() {

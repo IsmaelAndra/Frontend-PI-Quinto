@@ -7,6 +7,21 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  //TERMINOS Y CONDICIONES
+  new = false;
+
+  openNewModal() {
+    (document.querySelector("#Politicas") as HTMLElement).classList.remove("hidden");
+    (document.querySelector("#Politicas") as HTMLElement).classList.add("flex");
+    this.new = true;
+  }
+
+  closeNewModal() {
+    (document.querySelector("#Politicas") as HTMLElement).classList.add("hidden");
+    (document.querySelector("#Politicas") as HTMLElement).classList.remove("flex");
+    this.new = false;
+  }
+
 
   //  INICIO DE VALIDACIONES LOGIN
   registerForm: FormGroup;
