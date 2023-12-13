@@ -181,13 +181,13 @@
           <div class="space-y-3">
             <div class="flex items-center justify-center">
               <label class="text-sm text-black">
-                Al hacer clic en Registrarte, aceptas los <a href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline">términos y condiciones</a> de
+                Al hacer clic en Registrarte, aceptas los
+                 <button (click)="openNewModal()" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">términos y condiciones</button> de
                 Salud360.
               </label>
             </div>
             <div>
-              <button type="submit" (click)="formCheck()"
+              <button
                 class="flex w-full rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
                 <span
                   class="block w-full rounded-full bg-white text-black px-8 py-2 text-base font-medium hover:bg-transparent hover:text-white">
@@ -205,5 +205,87 @@
         </form>
       </div>
     </div>
+
+    <div id="Politicas"
+    class="hidden bg-black bg-opacity-70 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen max-h-full">
+    <div class="relative w-full z-50 max-w-2xl max-h-full">
+      <form class="relative bg-white rounded-lg shadow">
+        <div class="flex items-start justify-between p-4 border-b rounded-t shadow-lg">
+          <h3 class="text-xl text-sky-600"><i class="fa fa-plus mx-2" aria-hidden="true"></i>
+            Términos y Condiciones de la Clínica de Medicina Salud 360
+          </h3>
+          <button class="p-1 hover:text-white hover:bg-sky-500 rounded-full focus:outline-none focus:ring"
+            (click)="closeNewModal()">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <p class="m-6">La clínica se compromete a proporcionar servicios médicos de calidad, incluyendo
+          consultas, diagnósticos, tratamientos y cualquier otro servicio médico especificado. <br>
+          ➢ Responsabilidad del Paciente: <br>
+          Los pacientes son responsables de proporcionar información precisa sobre su
+          historial médico, seguir las indicaciones médicas y cumplir con los pagos en
+          los plazos acordados. <br>
+          ➢ Citas y Cancelaciones:<br>
+          Los pacientes deben programar citas con anticipación. Se espera que
+          notifiquen con suficiente antelación cualquier cancelación o cambio en la cita.<br>
+          ➢ Pago de Servicios:<br>
+          Los pacientes son responsables de pagar por los servicios médicos recibidos.
+          Los detalles sobre tarifas y métodos de pago se especificarán en una lista de
+          precios o en un acuerdo financiero separado.<br>
+          ➢ Confidencialidad de la Información Médica:<br>
+          La clínica se compromete a mantener la confidencialidad de la información
+          médica de los pacientes de acuerdo con las leyes y regulaciones aplicables.<br>
+          ➢ Política de Cancelación y Reembolso:<br>
+          Se establecerán políticas claras sobre cancelaciones y reembolsos, detallando
+          las circunstancias bajo las cuales se pueden aplicar cargos y los procesos para
+          la devolución de pagos.<br>
+          ➢ Seguridad y Privacidad:<br>
+          La clínica implementará medidas de seguridad para proteger la información
+          del paciente y garantizar un entorno seguro para la prestación de servicios
+          médicos.<br>
+          ➢ Cumplimiento Normativo:<br>
+          La clínica cumplirá con todas las regulaciones y normativas locales
+          relacionadas con la práctica médica, incluyendo licencias y certificaciones
+          necesarias.<br>
+          ➢ Derechos de Propiedad Intelectual:<br>
+          Los pacientes respetarán los derechos de propiedad intelectual de la clínica,
+          incluyendo el uso de material educativo y cualquier otro contenido
+          proporcionado.<br>
+          ➢ Resolución de Conflictos:<br>
+          Cualquier conflicto entre la clínica y los pacientes se resolverá a través de
+          negociaciones de buena fe. Si no se llega a un acuerdo, se buscará mediación o
+          arbitraje según lo establecido por la ley.<br>
+          ➢ Modificaciones a los Términos y Condiciones:<br>
+          La clínica se reserva el derecho de realizar cambios en estos términos y
+          condiciones. Los cambios serán comunicados a los pacientes con anticipación.
+          ➢ Terminación de Servicios:<br>
+          La clínica se reserva el derecho de terminar la prestación de servicios a un
+          paciente si hay un incumplimiento grave de estos términos y condiciones.</p>
+        <div
+          class="flex items-center justify-center p-4 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b">
+          <button
+            class="flex w-52 rounded-full bg-gradient-to-tr from-cyan-300 to-sky-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
+            <span
+              class="block w-52 rounded-full bg-white text-black px-8 py-2 text-base font-medium hover:bg-transparent hover:text-white">
+              <i class="fa-regular fa-floppy-disk mr-2"></i> Guardar
+            </span>
+          </button>
+          <button (click)="closeNewModal()"
+            class="flex w-52 rounded-full bg-gradient-to-tr from-red-400 to-red-600 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
+            <span
+              class="block w-52 rounded-full bg-white text-black px-8 py-2 text-base font-medium hover:bg-transparent hover:text-white">
+              <i class="fa-solid fa-ban mr-2"></i> Cancelar
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
   </section>
 </body>
+
+
